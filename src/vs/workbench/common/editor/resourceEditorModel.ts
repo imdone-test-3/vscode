@@ -21,7 +21,7 @@ export class ResourceEditorModel extends BaseTextEditorModel {
 	) {
 		super(modelService, modeService, resource);
 
-		// TODO@Joao: force this class to dispose the underlying model
+		// TODO @Joao: force this class to dispose the underlying model id:135 gh:136
 		this.createdEditorModel = true;
 	}
 }

@@ -143,7 +143,7 @@ export class UserSettingsRenderer extends Disposable implements IPreferencesRend
 		this.editor.focus();
 		setting = this.getSetting(setting);
 		if (setting) {
-			// TODO:@sandy Selection range should be template range
+			// TODO: @sandy Selection range should be template range id:103 gh:104
 			this.editor.setSelection(setting.valueRange);
 			this.settingHighlighter.highlight(setting, true);
 		}

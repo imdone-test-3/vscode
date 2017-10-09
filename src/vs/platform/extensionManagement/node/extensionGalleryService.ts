@@ -669,7 +669,7 @@ export class ExtensionGalleryService implements IExtensionGalleryService {
 	}
 
 	private isEngineValid(engine: string): boolean {
-		// TODO@joao: discuss with alex '*' doesn't seem to be a valid engine version
+		// TODO @joao: discuss with alex '*' doesn't seem to be a valid engine version id:67 gh:68
 		return engine === '*' || isVersionValid(pkg.version, engine);
 	}
 

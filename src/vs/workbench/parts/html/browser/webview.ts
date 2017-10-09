@@ -274,7 +274,7 @@ export default class Webview {
 	}
 
 	style(theme: ITheme): void {
-		const { fontFamily, fontWeight, fontSize } = window.getComputedStyle(this._styleElement); // TODO@theme avoid styleElement
+		const { fontFamily, fontWeight, fontSize } = window.getComputedStyle(this._styleElement); // TODO @theme avoid styleElement id:142 gh:143
 
 		let value = `
 		:root {

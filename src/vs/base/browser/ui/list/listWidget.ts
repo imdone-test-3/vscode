@@ -484,7 +484,7 @@ const DefaultOptions: IListOptions<any> = {
 	mouseSupport: true
 };
 
-// TODO@Joao: move these utils into a SortedArray class
+// TODO @Joao: move these utils into a SortedArray class id:15 gh:16
 
 function getContiguousRangeContaining(range: number[], value: number): number[] {
 	const index = range.indexOf(value);

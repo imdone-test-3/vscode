@@ -159,7 +159,7 @@ export class ExtHostDocumentData extends MirrorModel {
 				range,
 				rangeIncludingLineBreak,
 				text,
-				firstNonWhitespaceCharacterIndex, //TODO@api, rename to 'leadingWhitespaceLength'
+				firstNonWhitespaceCharacterIndex, //TODO @api, rename to 'leadingWhitespaceLength' id:78 gh:79
 				isEmptyOrWhitespace: firstNonWhitespaceCharacterIndex === text.length
 			});
 

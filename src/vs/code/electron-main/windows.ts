@@ -159,7 +159,7 @@ export class WindowsManager implements IWindowsMainService {
 	private migrateLegacyWindowState(): void {
 		const state: ILegacyWindowsState = this.windowsState;
 
-		// TODO@Ben migration from previous openedFolders to new openedWindows property
+		// TODO @Ben migration from previous openedFolders to new openedWindows property id:40 gh:41
 		if (Array.isArray(state.openedFolders) && state.openedFolders.length > 0) {
 			state.openedWindows = state.openedFolders;
 			state.openedFolders = void 0;
@@ -167,7 +167,7 @@ export class WindowsManager implements IWindowsMainService {
 			state.openedWindows = [];
 		}
 
-		// TODO@Ben migration from previous workspacePath in window state to folderPath
+		// TODO @Ben migration from previous workspacePath in window state to folderPath id:71 gh:72
 		const states: ILegacyWindowState[] = [];
 		states.push(state.lastActiveWindow);
 		states.push(state.lastPluginDevelopmentHostWindow);
@@ -362,7 +362,7 @@ export class WindowsManager implements IWindowsMainService {
 		// When run with --add, take the folders that are to be opened as
 		// folders that should be added to the currently active window.
 		let foldersToAdd: IPath[] = [];
-		if (openConfig.addMode && product.quality !== 'stable') { // TODO@Ben multi root
+		if (openConfig.addMode && product.quality !== 'stable') { // TODO @Ben multi root id:43 gh:44
 			foldersToAdd = pathsToOpen.filter(path => !!path.folderPath).map(path => ({ filePath: path.folderPath }));
 			pathsToOpen = pathsToOpen.filter(path => !path.folderPath);
 		}
@@ -792,7 +792,7 @@ export class WindowsManager implements IWindowsMainService {
 		// This will ensure to open these folders in one window instead of multiple
 		// If we are in addMode, we should not do this because in that case all
 		// folders should be added to the existing window.
-		if (!openConfig.addMode && isCommandLineOrAPICall && product.quality !== 'stable') { // TODO@Ben multi root
+		if (!openConfig.addMode && isCommandLineOrAPICall && product.quality !== 'stable') { // TODO @Ben multi root id:42 gh:43
 			const foldersToOpen = windowsToOpen.filter(path => !!path.folderPath);
 			if (foldersToOpen.length > 1) {
 				const workspace = this.workspacesService.createWorkspaceSync(foldersToOpen.map(folder => folder.folderPath));
@@ -937,7 +937,7 @@ export class WindowsManager implements IWindowsMainService {
 			restoreWindows = ((windowConfig && windowConfig.restoreWindows) || 'one') as RestoreWindowsSetting;
 
 			if (restoreWindows === 'one' /* default */ && windowConfig && windowConfig.reopenFolders) {
-				restoreWindows = windowConfig.reopenFolders; // TODO@Ben migration
+				restoreWindows = windowConfig.reopenFolders; // TODO @Ben migration id:45 gh:46
 			}
 
 			if (['all', 'folders', 'one', 'none'].indexOf(restoreWindows) === -1) {

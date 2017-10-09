@@ -143,7 +143,7 @@ export class Throttler {
 	}
 }
 
-// TODO@Joao: can the previous throttler be replaced with this?
+// TODO @Joao: can the previous throttler be replaced with this? id:24 gh:25
 export class SimpleThrottler {
 
 	private current = TPromise.as<any>(null);

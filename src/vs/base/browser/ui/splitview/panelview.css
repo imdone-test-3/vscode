@@ -46,19 +46,19 @@
 	background-image: url('arrow-expand-dark.svg');
 }
 
-/* TODO: actions should be part of the panel, but they aren't yet */
+/* TODO: actions should be part of the panel, but they aren't yet  id:18 gh:19*/
 .monaco-panel-view .panel > .panel-header > .actions {
 	display: none;
 	flex: 1;
 }
 
-/* TODO: actions should be part of the panel, but they aren't yet */
+/* TODO: actions should be part of the panel, but they aren't yet  id:16 gh:17*/
 .monaco-panel-view .panel:hover > .panel-header > .actions,
 .monaco-panel-view .panel > .panel-header.focused > .actions {
 	display: initial;
 }
 
-/* TODO: actions should be part of the panel, but they aren't yet */
+/* TODO: actions should be part of the panel, but they aren't yet  id:31 gh:32*/
 .monaco-panel-view .panel > .panel-header > .actions .action-label {
 	width: 28px;
 	height: 22px;

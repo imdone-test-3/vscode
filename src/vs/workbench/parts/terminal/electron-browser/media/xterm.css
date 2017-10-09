@@ -65,7 +65,7 @@
 
 .terminal .xterm-helper-textarea {
 	/*
-	 * HACK: to fix IE's blinking cursor
+	 * HACK: to fix IE's blinking cursor id:148 gh:149
 	 * Move textarea out of the screen to the far left, so that the cursor is not visible.
 	 */
 	position: absolute;
@@ -82,7 +82,7 @@
 }
 
 .terminal .composition-view {
-	/* TODO: Composition position got messed up somewhere */
+	/* TODO: Composition position got messed up somewhere  id:112 gh:114*/
 	background: #000;
 	color: #FFF;
 	display: none;

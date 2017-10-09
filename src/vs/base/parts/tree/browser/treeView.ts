@@ -473,7 +473,7 @@ export class TreeView extends HeightMap {
 		});
 		this.scrollableElement.onScroll((e) => {
 			this.render(e.scrollTop, e.height);
-			this.emit('scroll', e); // TODO@Joao: is anyone interested in this event?
+			this.emit('scroll', e); // TODO @Joao: is anyone interested in this event? id:28 gh:29
 		});
 
 		if (Browser.isIE) {
@@ -656,7 +656,7 @@ export class TreeView extends HeightMap {
 	private setupMSGesture(): void {
 		if ((<any>window).MSGesture) {
 			this.msGesture = new MSGesture();
-			setTimeout(() => this.msGesture.target = this.wrapper, 100); // TODO@joh, TODO@IETeam
+			setTimeout(() => this.msGesture.target = this.wrapper, 100); // TODO @joh, TODO@IETeam id:34 gh:35
 		}
 	}
 
@@ -1675,7 +1675,7 @@ export class TreeView extends HeightMap {
 	}
 
 	public dispose(): void {
-		// TODO@joao: improve
+		// TODO @joao: improve id:27 gh:28
 		this.scrollableElement.dispose();
 
 		this.releaseModel();

@@ -90,7 +90,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 	) {
 		super(modelService, modeService);
 
-		// TODO@remote
+		// TODO @remote id:159 gh:160
 		// assert.ok(resource.scheme === 'file', 'TextFileEditorModel can only handle file:// resources.');
 
 		this.resource = resource;

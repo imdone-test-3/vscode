@@ -57,7 +57,7 @@ export class PreferencesService extends Disposable implements IPreferencesServic
 
 	_serviceBrand: any;
 
-	// TODO:@sandy merge these models into editor inputs by extending resource editor model
+	// TODO: @sandy merge these models into editor inputs by extending resource editor model id:107 gh:108
 	private defaultPreferencesEditorModels: ResourceMap<TPromise<IPreferencesEditorModel<any>>>;
 	private lastOpenedSettingsInput: PreferencesEditorInput = null;
 

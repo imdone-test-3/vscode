@@ -93,7 +93,7 @@ export class BackupRestorer implements IWorkbenchContribution {
 		const options = { pinned: true, preserveFocus: true, inactive: index > 0 || hasOpenedEditors };
 
 		if (resource.scheme === UNTITLED_SCHEMA && !BackupRestorer.UNTITLED_REGEX.test(resource.fsPath)) {
-			// TODO@Ben debt: instead of guessing if an untitled file has an associated file path or not
+			// TODO @Ben debt: instead of guessing if an untitled file has an associated file path or not id:91 gh:92
 			// this information should be provided by the backup service and stored as meta data within
 			return { filePath: resource.fsPath, options };
 		}

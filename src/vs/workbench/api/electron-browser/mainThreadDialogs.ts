@@ -26,7 +26,7 @@ export class MainThreadDialogs implements MainThreadDiaglogsShape {
 	}
 
 	$showOpenDialog(options: MainThreadDialogOpenOptions): TPromise<string[]> {
-		// TODO@joh what about remote dev setup?
+		// TODO @joh what about remote dev setup? id:73 gh:74
 		if (options.defaultUri && options.defaultUri.scheme !== 'file') {
 			return TPromise.wrapError(new Error('Not supported - Open-dialogs can only be opened on `file`-uris.'));
 		}
@@ -39,7 +39,7 @@ export class MainThreadDialogs implements MainThreadDiaglogsShape {
 	}
 
 	$showSaveDialog(options: MainThreadDialogSaveOptions): TPromise<string> {
-		// TODO@joh what about remote dev setup?
+		// TODO @joh what about remote dev setup? id:74 gh:75
 		if (options.defaultUri && options.defaultUri.scheme !== 'file') {
 			return TPromise.wrapError(new Error('Not supported - Save-dialogs can only be opened on `file`-uris.'));
 		}

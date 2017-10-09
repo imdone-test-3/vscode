@@ -39,7 +39,7 @@ export interface IViewDescriptor {
 
 	readonly location: ViewLocation;
 
-	// TODO do we really need this?!
+	// TODO do we really need this?! id:143 gh:144
 	readonly ctor: any;
 
 	readonly when?: ContextKeyExpr;
@@ -122,7 +122,7 @@ export const ViewsRegistry: IViewsRegistry = new class {
 
 	registerTreeViewDataProvider<T>(id: string, factory: ITreeViewDataProvider) {
 		if (!this.isDataProviderRegistered(id)) {
-			// TODO: throw error
+			// TODO: throw error id:133 gh:134
 		}
 		this._treeViewDataPoviders.set(id, factory);
 		this._onTreeViewDataProviderRegistered.fire(id);

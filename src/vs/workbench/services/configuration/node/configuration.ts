@@ -483,7 +483,7 @@ export class WorkspaceService extends Disposable implements IWorkspaceConfigurat
 
 	private resetCaches(): void {
 		this.cachedFolderConfigs = new StrictResourceMap<FolderConfiguration<any>>();
-		this._configuration = new Configuration(<any>this.baseConfigurationService.configuration(), new ConfigurationModel<any>(), new StrictResourceMap<FolderConfigurationModel<any>>(), this.getWorkbenchState() !== WorkbenchState.EMPTY ? this.workspace : null); //TODO: @Sandy Avoid passing null
+		this._configuration = new Configuration(<any>this.baseConfigurationService.configuration(), new ConfigurationModel<any>(), new StrictResourceMap<FolderConfigurationModel<any>>(), this.getWorkbenchState() !== WorkbenchState.EMPTY ? this.workspace : null); //TODO: @Sandy Avoid passing null id:152 gh:153
 		this.initCachesForFolders(this.workspace.folders);
 	}
 
@@ -532,7 +532,7 @@ export class WorkspaceService extends Disposable implements IWorkspaceConfigurat
 		if (this.workspace && this.workspace.configuration) {
 			let configuredFolders = toWorkspaceFolders(this.workspaceConfiguration.workspaceConfigurationModel.folders, URI.file(paths.dirname(this.workspace.configuration.fsPath)));
 			const changes = this.compareFolders(this.workspace.folders, configuredFolders);
-			if (changes.added.length || changes.removed.length || changes.changed.length) { // TODO@Sandeep be smarter here about detecting changes
+			if (changes.added.length || changes.removed.length || changes.changed.length) { // TODO @Sandeep be smarter here about detecting changes id:118 gh:119
 				this.workspace.folders = configuredFolders;
 				this.onFoldersChanged()
 					.then(configurationChanged => {
@@ -599,7 +599,7 @@ export class WorkspaceService extends Disposable implements IWorkspaceConfigurat
 		if (this.getWorkbenchState() === WorkbenchState.EMPTY) {
 			this._onDidUpdateConfiguration.fire({ source: ConfigurationSource.User, sourceConfig: this._configuration.user.contents });
 		} else {
-			this._onDidUpdateConfiguration.fire({ source: ConfigurationSource.Workspace, sourceConfig: this.workspace.folders.length ? this._configuration.getFolderConfigurationModel(this.workspace.folders[0].uri).contents : void 0 }); // TODO@Sandeep debt?
+			this._onDidUpdateConfiguration.fire({ source: ConfigurationSource.Workspace, sourceConfig: this.workspace.folders.length ? this._configuration.getFolderConfigurationModel(this.workspace.folders[0].uri).contents : void 0 }); // TODO @Sandeep debt? id:122 gh:123
 		}
 	}
 

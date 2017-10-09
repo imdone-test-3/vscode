@@ -146,7 +146,7 @@ export const optionsHelp: { [name: string]: string; } = {
 	'-h, --help': localize('help', "Print usage.")
 };
 
-// TODO@Ben multi root
+// TODO @Ben multi root id:65 gh:66
 if (product.quality === 'stable') {
 	delete optionsHelp['-a, --add'];
 }

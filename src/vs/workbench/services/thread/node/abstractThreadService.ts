@@ -8,7 +8,7 @@ import { TPromise } from 'vs/base/common/winjs.base';
 import { IDispatcher, RPCProtocol } from 'vs/workbench/services/extensions/node/rpcProtocol';
 import { ProxyIdentifier } from 'vs/workbench/services/thread/common/threadService';
 
-declare var Proxy: any; // TODO@TypeScript
+declare var Proxy: any; // TODO @TypeScript id:177 gh:178
 
 export abstract class AbstractThreadService implements IDispatcher {
 

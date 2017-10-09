@@ -294,7 +294,7 @@ export class FileWalker {
 				return;
 			}
 
-			// TODO: Optimize siblings clauses with ripgrep here.
+			// TODO: Optimize siblings clauses with ripgrep here. id:171 gh:172
 			this.addDirectoryEntries(tree, rootFolder, relativeFiles, onResult);
 
 			if (last) {

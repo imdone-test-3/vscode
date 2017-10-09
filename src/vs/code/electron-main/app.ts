@@ -313,10 +313,10 @@ export class CodeApplication {
 	private openFirstWindow(accessor: ServicesAccessor): void {
 		const appInstantiationService = accessor.get(IInstantiationService);
 
-		// TODO@Joao: unfold this
+		// TODO @Joao: unfold this id:35 gh:36
 		this.windowsMainService = accessor.get(IWindowsMainService);
 
-		// TODO@Joao: so ugly...
+		// TODO @Joao: so ugly... id:39 gh:40
 		this.windowsMainService.onWindowsCountChanged(e => {
 			if (!platform.isMacintosh && e.newCount === 0) {
 				this.sharedProcess.dispose();
@@ -394,7 +394,7 @@ export class CodeApplication {
 		this.sharedProcess.spawn();
 
 		// Helps application icon refresh after an update with new icon is installed (macOS)
-		// TODO@Ben remove after a couple of releases
+		// TODO @Ben remove after a couple of releases id:38 gh:39
 		if (platform.isMacintosh) {
 			if (!this.storageService.getItem(CodeApplication.APP_ICON_REFRESH_KEY)) {
 				this.storageService.setItem(CodeApplication.APP_ICON_REFRESH_KEY, true);

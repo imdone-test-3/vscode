@@ -94,7 +94,7 @@ export class MergeConflictParser {
 
 		// Assume that descriptor.current.header, descriptor.incoming.header and descriptor.splitter
 		// have valid ranges, fill in content and total ranges from these parts.
-		// NOTE: We need to shift the decorator range back one character so the splitter does not end up with
+		// NOTE: We need to shift the decorator range back one character so the splitter does not end up with id:8 gh:9
 		// two decoration colors (current and splitter), if we take the new line from the content into account
 		// the decorator will wrap to the next line.
 		return {

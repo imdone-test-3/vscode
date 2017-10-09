@@ -185,7 +185,7 @@ class Extension implements IExtension {
 			if (this.gallery.assets.readme) {
 				return this.galleryService.getReadme(this.gallery);
 			}
-			this.telemetryService.publicLog('extensions:NotFoundReadMe', this.telemetryData); // TODO: Sandy - check for such extensions
+			this.telemetryService.publicLog('extensions:NotFoundReadMe', this.telemetryData); // TODO: Sandy - check for such extensions id:151 gh:152
 		}
 
 		if (this.local && this.local.readmeUrl) {
@@ -755,7 +755,7 @@ export class ExtensionsWorkbenchService implements IExtensionsWorkbenchService {
 	private onUninstallExtension(id: string): void {
 		const extension = this.installed.filter(e => e.local.id === id)[0];
 		const newLength = this.installed.filter(e => e.local.id !== id).length;
-		// TODO: Ask @Joao why is this?
+		// TODO: Ask @Joao why is this? id:140 gh:141
 		if (newLength === this.installed.length) {
 			return;
 		}

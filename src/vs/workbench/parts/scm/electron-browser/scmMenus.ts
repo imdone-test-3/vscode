@@ -51,7 +51,7 @@ export class SCMMenus implements IDisposable {
 	private updateTitleActions(): void {
 		this.titleActions = [];
 		this.titleSecondaryActions = [];
-		// TODO@joao: second arg used to be null
+		// TODO @joao: second arg used to be null id:156 gh:157
 		fillInActions(this.titleMenu, { shouldForwardArgs: true }, { primary: this.titleActions, secondary: this.titleSecondaryActions });
 		this._onDidChangeTitle.fire();
 	}

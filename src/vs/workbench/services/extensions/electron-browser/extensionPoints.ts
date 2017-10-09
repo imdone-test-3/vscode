@@ -301,7 +301,7 @@ export class ExtensionScanner {
 						return folders;
 					}
 
-					// TODO: align with extensionsService
+					// TODO: align with extensionsService id:169 gh:170
 					const nonGallery: string[] = [];
 					const gallery: { folder: string; id: string; version: string; }[] = [];
 

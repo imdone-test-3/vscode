@@ -94,7 +94,7 @@ export interface IWindowsService {
 	// foreground ordering issues on Windows
 	openExternal(url: string): TPromise<boolean>;
 
-	// TODO: this is a bit backwards
+	// TODO: this is a bit backwards id:105 gh:106
 	startCrashReporter(config: Electron.CrashReporterStartOptions): TPromise<void>;
 }
 
@@ -151,7 +151,7 @@ export interface IWindowSettings {
 	openFilesInNewWindow: 'on' | 'off' | 'default';
 	openFoldersInNewWindow: 'on' | 'off' | 'default';
 	restoreWindows: 'all' | 'folders' | 'one' | 'none';
-	reopenFolders: 'all' | 'one' | 'none'; // TODO@Ben deprecated
+	reopenFolders: 'all' | 'one' | 'none'; // TODO @Ben deprecated id:72 gh:73
 	restoreFullscreen: boolean;
 	zoomLevel: number;
 	titleBarStyle: 'native' | 'custom';

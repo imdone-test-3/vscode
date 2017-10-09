@@ -555,7 +555,7 @@ export class TerminalInstance implements ITerminalInstance {
 
 		let cwd: string;
 
-		// TODO: Handle non-existent customCwd
+		// TODO: Handle non-existent customCwd id:165 gh:166
 		if (!shell.ignoreConfigurationCwd) {
 			// Evaluate custom cwd first
 			const customCwd = this._configHelper.config.cwd;
@@ -764,8 +764,8 @@ export class TerminalInstance implements ITerminalInstance {
 		this._shellLaunchConfig = shell;
 	}
 
-	// TODO: This should be private/protected
-	// TODO: locale should not be optional
+	// TODO: This should be private/protected id:150 gh:151
+	// TODO: locale should not be optional id:115 gh:117
 	public static createTerminalEnv(parentEnv: IStringDictionary<string>, shell: IShellLaunchConfig, cwd: string, locale?: string, cols?: number, rows?: number): IStringDictionary<string> {
 		const env = shell.env ? shell.env : TerminalInstance._cloneEnv(parentEnv);
 		env['PTYPID'] = process.pid.toString();

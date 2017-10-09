@@ -20,7 +20,7 @@ export function OneGetThreadService(thing: any): IThreadService {
 	};
 }
 
-declare var Proxy; // TODO@TypeScript
+declare var Proxy; // TODO @TypeScript id:178 gh:179
 
 export abstract class AbstractTestThreadService {
 

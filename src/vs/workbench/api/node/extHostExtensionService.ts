@@ -254,19 +254,19 @@ export class ExtHostExtensionService implements ExtHostExtensionServiceShape {
 		try {
 			if (typeof extension.module.deactivate === 'function') {
 				result = TPromise.wrap(extension.module.deactivate()).then(null, (err) => {
-					// TODO: Do something with err if this is not the shutdown case
+					// TODO: Do something with err if this is not the shutdown case id:77 gh:78
 					return TPromise.as(void 0);
 				});
 			}
 		} catch (err) {
-			// TODO: Do something with err if this is not the shutdown case
+			// TODO: Do something with err if this is not the shutdown case id:141 gh:142
 		}
 
 		// clean up subscriptions
 		try {
 			dispose(extension.subscriptions);
 		} catch (err) {
-			// TODO: Do something with err if this is not the shutdown case
+			// TODO: Do something with err if this is not the shutdown case id:131 gh:132
 		}
 
 		return result;

@@ -928,7 +928,7 @@ declare module "cluster" {
         fork(env?: any): Worker;
         isMaster: boolean;
         isWorker: boolean;
-        // TODO: cluster.schedulingPolicy
+        // TODO: cluster.schedulingPolicy id:14 gh:15
         settings: ClusterSettings;
         setupMaster(settings?: ClusterSetupMasterSettings): void;
         worker: Worker;
@@ -1006,7 +1006,7 @@ declare module "cluster" {
     export function fork(env?: any): Worker;
     export var isMaster: boolean;
     export var isWorker: boolean;
-    // TODO: cluster.schedulingPolicy
+    // TODO: cluster.schedulingPolicy id:13 gh:14
     export var settings: ClusterSettings;
     export function setupMaster(settings?: ClusterSetupMasterSettings): void;
     export var worker: Worker;
@@ -3212,7 +3212,7 @@ declare module "tls" {
          */
         getSession(): any;
         /**
-         * NOTE: Works only with client TLS sockets.
+         * NOTE: Works only with client TLS sockets. id:22 gh:23
          * Useful only for debugging, for session reuse provide session option to tls.connect().
          * @returns {any} - TLS session ticket or undefined if none was negotiated.
          */

@@ -166,7 +166,7 @@ export class ViewModelDecorations implements IDisposable {
 			}
 			if (decorationOptions.beforeContentClassName) {
 				if (startLineNumber <= viewRange.startLineNumber && viewRange.startLineNumber <= endLineNumber) {
-					// TODO: What happens if the startLineNumber and startColumn is at the end of a line?
+					// TODO: What happens if the startLineNumber and startColumn is at the end of a line? id:87 gh:88
 					let inlineDecoration = new InlineDecoration(
 						new Range(viewRange.startLineNumber, viewRange.startColumn, viewRange.startLineNumber, viewRange.startColumn + 1),
 						decorationOptions.beforeContentClassName,

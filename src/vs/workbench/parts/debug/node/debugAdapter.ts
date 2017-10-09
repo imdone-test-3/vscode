@@ -72,7 +72,7 @@ export class Adapter {
 					// relative path
 					if (details.command.indexOf('/') < 0 && details.command.indexOf('\\') < 0) {
 						// no separators: command looks like a runtime name like 'node' or 'mono'
-						return TPromise.as(details);	// TODO: check that the runtime is available on PATH
+						return TPromise.as(details);	// TODO: check that the runtime is available on PATH id:95 gh:96
 					}
 				}
 			} else {

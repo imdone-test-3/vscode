@@ -970,7 +970,7 @@ export class Model implements IModel {
 			}
 			this.addReplElements(toAdd);
 		} else {
-			// TODO@Isidor hack, we should introduce a new type which is an output that can fetch children like an expression
+			// TODO @Isidor hack, we should introduce a new type which is an output that can fetch children like an expression id:149 gh:150
 			(<any>data).severity = severity;
 			(<any>data).sourceData = source;
 			this.addReplElements([data]);

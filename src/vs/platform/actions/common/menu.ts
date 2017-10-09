@@ -80,7 +80,7 @@ export class Menu implements IMenu {
 			for (const item of items) {
 				if (this._contextKeyService.contextMatchesRules(item.when)) {
 					const action = new MenuItemAction(item.command, item.alt, options, this._commandService);
-					action.order = item.order; //TODO@Ben order is menu item property, not an action property
+					action.order = item.order; //TODO @Ben order is menu item property, not an action property id:96 gh:97
 					activeActions.push(action);
 				}
 			}
