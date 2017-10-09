@@ -228,7 +228,7 @@ export class OpenEditorsView extends ViewsViewletPanel {
 		this.minimumBodySize = this.maximumBodySize = this.getExpandedBodySize(this.model);
 		// Show groups only if there is more than 1 group
 		const treeInput = this.model.groups.length === 1 ? this.model.groups[0] : this.model;
-		// TODO@Isidor temporary workaround due to a partial tree refresh issue
+		// TODO @Isidor temporary workaround due to a partial tree refresh issue id:101 gh:102
 		this.fullRefreshNeeded = true;
 		const toRefresh = this.fullRefreshNeeded ? null : this.groupToRefresh;
 

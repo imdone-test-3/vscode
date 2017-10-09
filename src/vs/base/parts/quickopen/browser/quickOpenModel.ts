@@ -172,7 +172,7 @@ export class QuickOpenEntry {
 	}
 
 	public isFile(): boolean {
-		return false; // TODO@Ben debt with editor history merging
+		return false; // TODO @Ben debt with editor history merging id:25 gh:26
 	}
 }
 
@@ -412,7 +412,7 @@ class Renderer implements IRenderer<QuickOpenEntry> {
 		data.actionBar.context = entry; // make sure the context is the current element
 
 		this.actionProvider.getActions(null, entry).then((actions) => {
-			// TODO@Ben this will not work anymore as soon as quick open has more actions
+			// TODO @Ben this will not work anymore as soon as quick open has more actions id:36 gh:37
 			// but as long as there is only one are ok
 			if (data.actionBar.isEmpty() && actions && actions.length > 0) {
 				data.actionBar.push(actions, { icon: true, label: false });

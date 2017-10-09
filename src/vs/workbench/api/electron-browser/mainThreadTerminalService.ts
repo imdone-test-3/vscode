@@ -29,7 +29,7 @@ export class MainThreadTerminalService implements MainThreadTerminalServiceShape
 	public dispose(): void {
 		this._toDispose = dispose(this._toDispose);
 
-		// TODO@Daniel: Should all the previously created terminals be disposed
+		// TODO @Daniel: Should all the previously created terminals be disposed id:138 gh:139
 		// when the extension host process goes down ?
 	}
 

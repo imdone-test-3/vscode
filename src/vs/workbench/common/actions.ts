@@ -61,7 +61,7 @@ Registry.add(Extensions.WorkbenchActions, new class implements IWorkbenchActionR
 		});
 
 		// menu item
-		// TODO@Ben slightly weird if-check required because of
+		// TODO @Ben slightly weird if-check required because of id:84 gh:85
 		// https://github.com/Microsoft/vscode/blob/d28ace31aa147596e35adf101a27768a048c79ec/src/vs/workbench/parts/files/browser/fileActions.contribution.ts#L194
 		if (descriptor.label) {
 
@@ -76,7 +76,7 @@ Registry.add(Extensions.WorkbenchActions, new class implements IWorkbenchActionR
 			registrations.push(MenuRegistry.appendMenuItem(MenuId.CommandPalette, { command }));
 		}
 
-		// TODO@alex,joh
+		// TODO @alex,joh id:86 gh:87
 		// support removal of keybinding rule
 		// support removal of command-ui
 		return combinedDisposable(registrations);

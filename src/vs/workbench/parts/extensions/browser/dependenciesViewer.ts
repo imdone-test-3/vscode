@@ -161,7 +161,7 @@ export class Controller extends DefaultController {
 	constructor( @IExtensionsWorkbenchService private extensionsWorkdbenchService: IExtensionsWorkbenchService) {
 		super({ clickBehavior: ClickBehavior.ON_MOUSE_UP, keyboardSupport: false });
 
-		// TODO@Sandeep this should be a command
+		// TODO @Sandeep this should be a command id:97 gh:98
 		this.downKeyBindingDispatcher.set(KeyMod.CtrlCmd | KeyCode.Enter, (tree: ITree, event: any) => this.openExtension(tree, true));
 	}
 

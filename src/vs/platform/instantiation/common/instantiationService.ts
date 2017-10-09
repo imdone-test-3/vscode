@@ -148,7 +148,7 @@ export class InstantiationService implements IInstantiationService {
 			const item = stack.pop();
 			graph.lookupOrInsertNode(item);
 
-			// TODO@joh use the graph to find a cycle
+			// TODO @joh use the graph to find a cycle id:68 gh:69
 			// a weak heuristic for cycle checks
 			if (count++ > 100) {
 				throwCycleError();

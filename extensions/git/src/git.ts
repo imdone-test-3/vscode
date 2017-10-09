@@ -525,7 +525,7 @@ export class Repository {
 		return this.repositoryRoot;
 	}
 
-	// TODO@Joao: rename to exec
+	// TODO @Joao: rename to exec id:1 gh:2
 	async run(args: string[], options: SpawnOptions = {}): Promise<IExecutionResult> {
 		return await this.git.exec(this.repositoryRoot, args, options);
 	}
@@ -573,7 +573,7 @@ export class Repository {
 
 		return stdout;
 
-		// TODO@joao
+		// TODO @joao id:2 gh:3
 		// return new Promise((c, e) => {
 		// detectMimesFromStream(child.stdout, null, (err, result) => {
 		// 	if (err) {

@@ -36,7 +36,7 @@ class ResourceModelCollection extends ReferenceCollection<TPromise<ITextEditorMo
 			return this.textFileService.models.loadOrCreate(resource);
 		}
 		if (!this.providers[resource.scheme]) {
-			// TODO@remote
+			// TODO @remote id:130 gh:131
 			return this.textFileService.models.loadOrCreate(resource);
 		}
 		return this.resolveTextModelContent(key).then(() => this.instantiationService.createInstance(ResourceEditorModel, resource));
@@ -86,7 +86,7 @@ class ResourceModelCollection extends ReferenceCollection<TPromise<ITextEditorMo
 
 		return first(factories).then(model => {
 			if (!model) {
-				console.error(`Unable to open '${resource}' resource is not available.`); // TODO PII
+				console.error(`Unable to open '${resource}' resource is not available.`); // TODO PII id:158 gh:159
 				return TPromise.wrapError<IModel>(new Error('resource is not available'));
 			}
 
@@ -117,13 +117,13 @@ export class TextModelResolverService implements ITextModelService {
 	private _createModelReference(resource: URI): TPromise<IReference<ITextEditorModel>> {
 
 		// Untitled Schema: go through cached input
-		// TODO ImmortalReference is a hack
+		// TODO ImmortalReference is a hack id:174 gh:175
 		if (resource.scheme === UNTITLED_SCHEMA) {
 			return this.untitledEditorService.loadOrCreate({ resource }).then(model => new ImmortalReference(model));
 		}
 
 		// InMemory Schema: go through model service cache
-		// TODO ImmortalReference is a hack
+		// TODO ImmortalReference is a hack id:166 gh:167
 		if (resource.scheme === 'inmemory') {
 			const cachedModel = this.modelService.getModel(resource);
 

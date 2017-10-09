@@ -90,7 +90,7 @@ export class SearchService implements ISearchService {
 
 			const providerPromises = this.searchProvider.map(provider => TPromise.wrap(provider.search(query)).then(e => e,
 				err => {
-					// TODO@joh
+					// TODO @joh id:123 gh:124
 					// single provider fail. fail all?
 					onError(err);
 				},
@@ -115,13 +115,13 @@ export class SearchService implements ISearchService {
 					stats: undefined
 				};
 
-				// TODO@joh
+				// TODO @joh id:128 gh:129
 				// sorting, disjunct results
 				for (const value of values) {
 					if (!value) {
 						continue;
 					}
-					// TODO@joh individual stats/limit
+					// TODO @joh individual stats/limit id:127 gh:128
 					result.stats = value.stats || result.stats;
 					result.limitHit = value.limitHit || result.limitHit;
 

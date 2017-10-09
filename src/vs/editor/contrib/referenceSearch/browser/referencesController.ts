@@ -237,7 +237,7 @@ export class ReferencesController implements editorCommon.IEditorContribution {
 			this._ignoreModelChangeEvent = false;
 
 			if (!openedEditor || openedEditor.getControl() !== this._editor) {
-				// TODO@Alex TODO@Joh
+				// TODO @Alex TODO@Joh id:60 gh:61
 				// when opening the current reference we might end up
 				// in a different editor instance. that means we also have
 				// a different instance of this reference search controller

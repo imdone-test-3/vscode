@@ -300,9 +300,9 @@ export class TerminalPanel extends Panel {
 			return;
 		}
 		this._font = this._terminalService.configHelper.getFont();
-		// TODO: Can we support ligatures?
+		// TODO: Can we support ligatures? id:119 gh:120
 		// dom.toggleClass(this._parentDomElement, 'enable-ligatures', this._terminalService.configHelper.config.fontLigatures);
-		// TODO: How to handle Disable bold?
+		// TODO: How to handle Disable bold? id:117 gh:118
 		// dom.toggleClass(this._parentDomElement, 'disable-bold', !this._terminalService.configHelper.config.enableBold);
 		this.layout(new Dimension(this._parentDomElement.offsetWidth, this._parentDomElement.offsetHeight));
 	}

@@ -134,7 +134,7 @@ suite('Decoration Render Options', () => {
 		s = new CodeEditorServiceImpl(themeServiceMock, styleSheet);
 		s.registerDecorationType('example', { gutterIconPath: 'c:\\files\\miles\\more.png' });
 		sheet = readStyleSheet(styleSheet);
-		// TODO@Alex test fails
+		// TODO @Alex test fails id:64 gh:65
 		// assert(
 		// 	sheet.indexOf('background: url(\'file:///c%3A/files/miles/more.png\') center center no-repeat;') > 0
 		// 	|| sheet.indexOf('background: url("file:///c%3A/files/miles/more.png") center center no-repeat;') > 0

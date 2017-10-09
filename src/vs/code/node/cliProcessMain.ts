@@ -57,7 +57,7 @@ class Main {
 	) { }
 
 	run(argv: ParsedArgs): TPromise<any> {
-		// TODO@joao - make this contributable
+		// TODO @joao - make this contributable id:44 gh:45
 
 		if (argv['install-source']) {
 			return this.setInstallSource(argv['install-source']);

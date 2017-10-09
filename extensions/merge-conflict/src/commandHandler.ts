@@ -166,7 +166,7 @@ export default class CommandHandler implements vscode.Disposable {
 			return;
 		}
 		else if (!navigationResult.conflict) {
-			// TODO: Show error message?
+			// TODO: Show error message? id:6 gh:7
 			return;
 		}
 

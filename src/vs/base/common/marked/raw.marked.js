@@ -4,7 +4,7 @@
  * https://github.com/chjj/marked
  */
 
-// TODO MonacoChange: we have our own way of defining modules
+// TODO MonacoChange: we have our own way of defining modules id:26 gh:27
 // ;(function() {
 // END MonacoChange
 
@@ -1275,7 +1275,7 @@ marked.inlineLexer = InlineLexer.output;
 
 marked.parse = marked;
 
-// TODO MonacoChange: we have our own way of defining modules
+// TODO MonacoChange: we have our own way of defining modules id:30 gh:31
 define([], function() {
   return marked;
 });

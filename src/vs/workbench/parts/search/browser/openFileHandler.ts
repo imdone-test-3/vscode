@@ -88,7 +88,7 @@ export class FileEntry extends EditorQuickOpenEntry {
 	}
 
 	public isFile(): boolean {
-		return true; // TODO@Ben debt with editor history merging
+		return true; // TODO @Ben debt with editor history merging id:106 gh:107
 	}
 
 	public getInput(): IResourceInput | EditorInput {

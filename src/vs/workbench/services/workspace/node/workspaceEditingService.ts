@@ -116,7 +116,7 @@ export class WorkspaceEditingService implements IWorkspaceEditingService {
 	}
 
 	private isSupported(): boolean {
-		// TODO@Ben multi root
+		// TODO @Ben multi root id:157 gh:158
 		return (
 			this.environmentService.appQuality !== 'stable'  // not yet enabled in stable
 			&& this.contextService.getWorkbenchState() === WorkbenchState.WORKSPACE // we need a multi folder workspace to begin with
@@ -154,11 +154,11 @@ export class WorkspaceEditingService implements IWorkspaceEditingService {
 				enterWorkspacePromise = this.migrate(result.workspace).then(() => {
 
 					// Reinitialize backup service
-					const backupFileService = this.backupFileService as BackupFileService; // TODO@Ben ugly cast
+					const backupFileService = this.backupFileService as BackupFileService; // TODO @Ben ugly cast id:162 gh:163
 					backupFileService.initialize(result.backupPath);
 
 					// Reinitialize configuration service
-					const workspaceImpl = this.contextService as WorkspaceService; // TODO@Ben TODO@Sandeep ugly cast
+					const workspaceImpl = this.contextService as WorkspaceService; // TODO @Ben TODO@Sandeep ugly cast id:175 gh:176
 					return workspaceImpl.initialize(result.workspace);
 				});
 			}
@@ -183,7 +183,7 @@ export class WorkspaceEditingService implements IWorkspaceEditingService {
 
 	private migrateStorage(toWorkspace: IWorkspaceIdentifier): void {
 
-		// TODO@Ben revisit this when we move away from local storage to a file based approach
+		// TODO @Ben revisit this when we move away from local storage to a file based approach id:170 gh:171
 		const storageImpl = this.storageService as StorageService;
 		const newWorkspaceId = migrateStorageToMultiRootWorkspace(storageImpl.workspaceId, toWorkspace, storageImpl.workspaceStorage);
 		storageImpl.setWorkspaceId(newWorkspaceId);

@@ -911,7 +911,7 @@ export class FileDragAndDrop extends SimpleFileResourceDragAndDrop {
 			const folders = result.filter(result => result.stat.isDirectory).map(result => result.stat.resource);
 			if (folders.length > 0) {
 				if (this.environmentService.appQuality === 'stable') {
-					return void 0; // TODO@Ben multi root
+					return void 0; // TODO @Ben multi root id:102 gh:103
 				}
 
 				if (this.contextService.getWorkbenchState() === WorkbenchState.WORKSPACE) {

@@ -449,7 +449,7 @@ export class SuggestWidget implements IContentWidget, IDelegate<ICompletionItem>
 
 		this.onThemeChange(themeService.getTheme());
 
-		// TODO@Alex: this is useful, but spammy
+		// TODO @Alex: this is useful, but spammy id:61 gh:62
 		// var isVisible = false;
 		// this.onDidVisibilityChange((newIsVisible) => {
 		// 	if (isVisible === newIsVisible) {
@@ -556,7 +556,7 @@ export class SuggestWidget implements IContentWidget, IDelegate<ICompletionItem>
 			}
 
 			this._ariaAlert(null);
-			// TODO@Alex: Chromium bug
+			// TODO @Alex: Chromium bug id:92 gh:93
 			// this.editor.setAriaActiveDescendant(null);
 
 			return;
@@ -565,8 +565,8 @@ export class SuggestWidget implements IContentWidget, IDelegate<ICompletionItem>
 		const item = e.elements[0];
 		this._ariaAlert(this._getSuggestionAriaAlertLabel(item));
 
-		// TODO@Alex: Chromium bug
-		// // TODO@Alex: the list is not done rendering...
+		// TODO @Alex: Chromium bug id:62 gh:63
+		// // TODO @Alex: the list is not done rendering... id:63 gh:64
 		// setTimeout(() => {
 		// 	this.editor.setAriaActiveDescendant(this.list.getElementId(e.indexes[0]));
 		// }, 100);

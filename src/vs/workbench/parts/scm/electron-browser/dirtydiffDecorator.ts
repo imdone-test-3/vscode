@@ -283,7 +283,7 @@ export class DirtyDiffDecorator implements ext.IWorkbenchContribution {
 	}
 
 	private onEditorsChanged(): void {
-		// HACK: This is the best current way of figuring out whether to draw these decorations
+		// HACK: This is the best current way of figuring out whether to draw these decorations id:104 gh:105
 		// or not. Needs context from the editor, to know whether it is a diff editor, in place editor
 		// etc.
 

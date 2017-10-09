@@ -54,7 +54,7 @@ import { Command } from 'vs/editor/common/modes';
 import { render as renderOcticons } from 'vs/base/browser/ui/octiconLabel/octiconLabel';
 import { StandardMouseEvent } from 'vs/base/browser/mouseEvent';
 
-// TODO@Joao
+// TODO @Joao id:144 gh:145
 // Need to subclass MenuItemActionItem in order to respect
 // the action context coming from any action bar, without breaking
 // existing users

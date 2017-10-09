@@ -485,7 +485,7 @@ suite('workspace-namespace', () => {
 		});
 	});
 
-	// TODO@Joh this test fails randomly
+	// TODO @Joh this test fails randomly id:11 gh:12
 	// test('findFiles, cancellation', () => {
 
 	// 	const source = new CancellationTokenSource();

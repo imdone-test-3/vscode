@@ -43,7 +43,7 @@ export class RipgrepEngine {
 		this.rgProc.kill();
 	}
 
-	// TODO@Rob - make promise-based once the old search is gone, and I don't need them to have matching interfaces anymore
+	// TODO @Rob - make promise-based once the old search is gone, and I don't need them to have matching interfaces anymore id:155 gh:156
 	search(onResult: (match: ISerializedFileMatch) => void, onMessage: (message: ISearchLog) => void, done: (error: Error, complete: ISerializedSearchComplete) => void): void {
 		if (!this.config.folderQueries.length && !this.config.extraFiles.length) {
 			process.removeListener('exit', this.killRgProcFn);

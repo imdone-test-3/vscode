@@ -677,7 +677,7 @@ export class TerminalTaskSystem extends EventEmitter implements ITaskSystem {
 	}
 
 	private resolveVariable(task: CustomTask | ContributedTask, value: string): string {
-		// TODO@Dirk Task.getWorkspaceFolder should return a WorkspaceFolder that is defined in workspace.ts
+		// TODO @Dirk Task.getWorkspaceFolder should return a WorkspaceFolder that is defined in workspace.ts id:160 gh:161
 		return this.configurationResolverService.resolve(<any>Task.getWorkspaceFolder(task), value);
 	}
 

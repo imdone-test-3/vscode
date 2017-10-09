@@ -87,7 +87,7 @@ export abstract class TypeScriptBaseCodeLensProvider implements CodeLensProvider
 	}
 
 	/**
-	 * TODO: TS currently requires the position for 'references 'to be inside of the identifer
+	 * TODO: TS currently requires the position for 'references 'to be inside of the identifer id:19 gh:20
 	 * Massage the range to make sure this is the case
 	 */
 	protected getSymbolRange(document: TextDocument, item: Proto.NavigationTree): Range | null {

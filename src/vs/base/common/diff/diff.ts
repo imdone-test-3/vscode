@@ -381,7 +381,7 @@ export class LcsDiff {
 			// We can break the problem down recursively by finding the changes in the
 			// First Half:   (originalStart, modifiedStart) to (midOriginal, midModified)
 			// Second Half:  (midOriginal + 1, minModified + 1) to (originalEnd, modifiedEnd)
-			// NOTE: ComputeDiff() is inclusive, therefore the second range starts on the next point
+			// NOTE: ComputeDiff() is inclusive, therefore the second range starts on the next point id:21 gh:22
 
 			let leftChanges = this.ComputeDiffRecursive(originalStart, midOriginal, modifiedStart, midModified, quitEarlyArr);
 			let rightChanges: DiffChange[] = [];
@@ -462,7 +462,7 @@ export class LcsDiff {
 		forwardChanges = changeHelper.getReverseChanges();
 
 		if (quitEarlyArr[0]) {
-			// TODO: Calculate a partial from the reverse diagonals.
+			// TODO: Calculate a partial from the reverse diagonals. id:23 gh:24
 			//       For now, just assume everything after the midOriginal/midModified point is a diff
 
 			let originalStartPoint = midOriginalArr[0] + 1;
@@ -776,7 +776,7 @@ export class LcsDiff {
 
 
 		// If we got here, then we have the full trace in history. We just have to convert it to a change list
-		// NOTE: This part is a bit messy
+		// NOTE: This part is a bit messy id:33 gh:34
 		return this.WALKTRACE(diagonalForwardBase, diagonalForwardStart, diagonalForwardEnd, diagonalForwardOffset,
 			diagonalReverseBase, diagonalReverseStart, diagonalReverseEnd, diagonalReverseOffset,
 			forwardPoints, reversePoints,

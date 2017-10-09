@@ -160,7 +160,7 @@ export class DecorationsOverlay extends DynamicViewOverlay {
 				range = new Range(range.startLineNumber, range.startColumn, range.endLineNumber - 1, this._context.model.getLineMaxColumn(range.endLineNumber - 1));
 			}
 
-			let linesVisibleRanges = ctx.linesVisibleRangesForRange(range, /*TODO@Alex*/className === 'findMatch');
+			let linesVisibleRanges = ctx.linesVisibleRangesForRange(range, /*TODO @Alex id:79 gh:80*/className === 'findMatch');
 			if (!linesVisibleRanges) {
 				continue;
 			}

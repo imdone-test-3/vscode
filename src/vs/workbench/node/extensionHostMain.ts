@@ -30,7 +30,7 @@ process.exit = function () {
 export function exit(code?: number) {
 	//nativeExit(code);
 
-	// TODO@electron
+	// TODO @electron id:89 gh:90
 	// See https://github.com/Microsoft/vscode/issues/32990
 	// calling process.exit() does not exit the process when the process is being debugged
 	// It waits for the debugger to disconnect, but in our version, the debugger does not
@@ -118,7 +118,7 @@ export class ExtensionHostMain {
 		this._isTerminating = true;
 
 		errors.setUnexpectedErrorHandler((err) => {
-			// TODO: write to log once we have one
+			// TODO: write to log once we have one id:147 gh:148
 		});
 
 		let allPromises: TPromise<void>[] = [];
@@ -131,7 +131,7 @@ export class ExtensionHostMain {
 				return this._extensionService.deactivate(extensionId);
 			});
 		} catch (err) {
-			// TODO: write to log once we have one
+			// TODO: write to log once we have one id:137 gh:138
 		}
 
 		let extensionsDeactivated = TPromise.join(allPromises).then<void>(() => void 0);

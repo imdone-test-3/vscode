@@ -257,7 +257,7 @@ export interface IExtensionManagementService {
 
 export const IExtensionEnablementService = createDecorator<IExtensionEnablementService>('extensionEnablementService');
 
-// TODO: @sandy: Merge this into IExtensionManagementService when we have a storage service available in Shared process
+// TODO: @sandy: Merge this into IExtensionManagementService when we have a storage service available in Shared process id:66 gh:67
 export interface IExtensionEnablementService {
 	_serviceBrand: any;
 

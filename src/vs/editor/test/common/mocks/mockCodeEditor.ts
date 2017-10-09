@@ -90,7 +90,7 @@ export function withMockCodeEditor(text: string[], options: MockCodeEditorCreati
 }
 
 export function mockCodeEditor(text: string[], options: MockCodeEditorCreationOptions): CommonCodeEditor {
-	// TODO: who owns this model now?
+	// TODO: who owns this model now? id:132 gh:133
 	if (!options.model) {
 		options.model = Model.createFromString(text.join('\n'));
 	}

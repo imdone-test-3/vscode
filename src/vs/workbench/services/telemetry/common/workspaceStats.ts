@@ -329,7 +329,7 @@ export class WorkspaceStats {
 		}
 	*/
 	private reportAzureNode(workspaceUris: URI[], tags: Tags): TPromise<Tags> {
-		// TODO: should also work for `node_modules` folders several levels down
+		// TODO: should also work for `node_modules` folders several levels down id:173 gh:174
 		const uris = workspaceUris.map(workspaceUri => {
 			const path = workspaceUri.path;
 			return workspaceUri.with({ path: `${path !== '/' ? path : ''}/node_modules` });

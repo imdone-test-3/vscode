@@ -393,7 +393,7 @@ export class DebugService implements debug.IDebugService {
 			}
 
 			// For compatibilty reasons check if wrong reason and source not present
-			// TODO@Isidor clean up these checks in October
+			// TODO @Isidor clean up these checks in October id:139 gh:140
 			if (event.body.reason === 'changed' || (event.body.reason === 'new' && !event.body.breakpoint.source) || event.body.reason === 'update') {
 				if (breakpoint) {
 					if (!breakpoint.column) {

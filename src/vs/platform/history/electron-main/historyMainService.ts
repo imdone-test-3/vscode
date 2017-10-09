@@ -22,7 +22,7 @@ import { IEnvironmentService } from 'vs/platform/environment/common/environment'
 import { isEqual } from 'vs/base/common/paths';
 
 export interface ILegacyRecentlyOpened extends IRecentlyOpened {
-	folders: string[]; // TODO@Ben migration
+	folders: string[]; // TODO @Ben migration id:134 gh:135
 }
 
 export class HistoryMainService implements IHistoryMainService {
@@ -154,7 +154,7 @@ export class HistoryMainService implements IHistoryMainService {
 			files.unshift(...currentFiles.map(f => f.filePath));
 		}
 
-		// TODO@Ben migration to new workspace ID
+		// TODO @Ben migration to new workspace ID id:100 gh:101
 		workspaces.forEach(workspaceOrFile => {
 			if (isSingleFolderWorkspaceIdentifier(workspaceOrFile)) {
 				return;

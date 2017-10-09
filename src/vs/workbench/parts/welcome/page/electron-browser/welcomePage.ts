@@ -444,7 +444,7 @@ class WelcomePage {
 					}
 					return this.extensionManagementService.installFromGallery(extension)
 						.then(() => {
-							// TODO: Do this as part of the install to avoid multiple events.
+							// TODO: Do this as part of the install to avoid multiple events. id:167 gh:168
 							return this.extensionEnablementService.setEnablement(extensionSuggestion.id, false);
 						}).then(() => {
 							return true;

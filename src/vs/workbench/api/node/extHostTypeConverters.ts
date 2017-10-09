@@ -399,7 +399,7 @@ export namespace Suggest {
 			result.textEdit = new types.TextEdit(result.range, result.insertText);
 		}
 
-		// TODO additionalEdits, command
+		// TODO additionalEdits, command id:82 gh:83
 
 		return result;
 	}

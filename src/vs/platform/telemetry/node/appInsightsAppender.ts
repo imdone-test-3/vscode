@@ -113,7 +113,7 @@ export class AppInsightsAppender implements ITelemetryAppender {
 				result[index] = safeStringify(value);
 
 			} else if (value instanceof Date) {
-				// TODO unsure why this is here and not in _getData
+				// TODO unsure why this is here and not in _getData id:136 gh:137
 				result[index] = value.toISOString();
 
 			} else if (isObject(value)) {

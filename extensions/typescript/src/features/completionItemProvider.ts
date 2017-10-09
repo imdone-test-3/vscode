@@ -222,7 +222,7 @@ export default class TypeScriptCompletionItemProvider implements CompletionItemP
 				// Only enable dot completions in TS files for now
 				let enableDotCompletions = document && (document.languageId === 'typescript' || document.languageId === 'typescriptreact');
 
-				// TODO: Workaround for https://github.com/Microsoft/TypeScript/issues/13456
+				// TODO: Workaround for https://github.com/Microsoft/TypeScript/issues/13456 id:12 gh:13
 				// Only enable dot completions when previous character is an identifier.
 				// Prevents incorrectly completing while typing spread operators.
 				if (position.character > 0) {

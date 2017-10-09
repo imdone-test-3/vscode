@@ -45,7 +45,7 @@ export abstract class ViewsViewletPanel extends ViewletPanel {
 	readonly name: string;
 	protected treeContainer: HTMLElement;
 
-	// TODO@sandeep why is tree here? isn't this coming only from TreeView
+	// TODO @sandeep why is tree here? isn't this coming only from TreeView id:85 gh:86
 	protected tree: ITree;
 	protected isDisposed: boolean;
 	private _isVisible: boolean;

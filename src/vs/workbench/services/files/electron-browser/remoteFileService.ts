@@ -128,7 +128,7 @@ export class RemoteFileService extends FileService {
 	canHandleResource(resource: URI): boolean {
 		return resource.scheme === Schemas.file
 			|| this._provider.has(resource.scheme)
-			// TODO@remote
+			// TODO @remote id:153 gh:154
 			|| this._supportedSchemes.indexOf(resource.scheme) >= 0;
 	}
 
@@ -457,7 +457,7 @@ export class RemoteFileService extends FileService {
 			: TPromise.as(null);
 
 		return prepare.then(() => {
-			// TODO@Joh This does only work for textfiles
+			// TODO @Joh This does only work for textfiles id:120 gh:121
 			// because the content turns things into a string
 			// and all binary data will be broken
 			return this.resolveContent(source).then(content => {
@@ -499,7 +499,7 @@ export class RemoteFileService extends FileService {
 		});
 	}
 
-	// TODO@Joh - file watching on demand!
+	// TODO @Joh - file watching on demand! id:124 gh:125
 	public watchFileChanges(resource: URI): void {
 		if (resource.scheme === Schemas.file) {
 			super.watchFileChanges(resource);
