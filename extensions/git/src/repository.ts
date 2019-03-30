@@ -164,7 +164,7 @@ export class Resource implements SourceControlResourceState {
 
 	@memoize
 	private get faded(): boolean {
-		// TODO @joao id:5 gh:6
+		// TODO  id:5 gh:6 @joao
 		return false;
 		// const workspaceRootPath = this.workspaceRoot.fsPath;
 		// return this.resourceUri.fsPath.substr(0, workspaceRootPath.length) !== workspaceRootPath;

@@ -3241,12 +3241,12 @@ declare module "tls" {
         /**
          * Initiate TLS renegotiation process.
          *
-         * NOTE: Can be used to request peer's certificate after the secure connection has been established.
-         * ANOTHER NOTE: When running as the server, socket will be destroyed with an error after handshakeTimeout timeout.
-         * @param {TlsOptions} options - The options may contain the following fields: rejectUnauthorized,
-         * requestCert (See tls.createServer() for details).
-         * @param {Function} callback - callback(err) will be executed with null as err, once the renegotiation
-         * is successfully completed.
+         * NOTE: Can be used to request peer's certificate after the secure connection has been established. id:2
+* ANOTHER NOTE: When running as the server, socket will be destroyed with an error after handshakeTimeout timeout.
+* @param {TlsOptions} options - The options may contain the following fields: rejectUnauthorized,
+* requestCert (See tls.createServer() for details).
+* @param {Function} callback - callback(err) will be executed with null as err, once the renegotiation
+* is successfully completed.
          */
         renegotiate(options: TlsOptions, callback: (err: Error) => any): any;
         /**

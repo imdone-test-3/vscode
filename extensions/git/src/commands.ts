@@ -164,7 +164,7 @@ export class CommandCenter {
 		const title = this.getTitle(resource);
 
 		if (!right) {
-			// TODO id:3 gh:4
+			// TODO  id:3 gh:4
 			console.error('oh no');
 			return;
 		}
