@@ -4,20 +4,29 @@
   ],
   "watcher": true,
   "keepEmptyPriority": true,
-  "lines": 5,
   "code": {
     "include_lists": [
       "TODO",
+      "DOING",
+      "DONE",
+      "PLANNING",
       "FIXME",
+      "ARCHIVE",
       "HACK",
       "CHANGED",
       "XXX",
       "IDEA",
       "NOTE",
-      "REVIEW"
+      "REVIEW",
+      "MARK",
+      "HELP"
     ]
   },
   "lists": [
+    {
+      "name": "HELP",
+      "hidden": false
+    },
     {
       "name": "TODO",
       "hidden": false
@@ -42,5 +51,12 @@
     "pedantic": false,
     "smartLists": true,
     "langPrefix": "language-"
-  }
+  },
+  "sync": {
+    "id": "5c9f8cf471146079923a6498",
+    "name": "imdone-test-3/vscode",
+    "useImdoneioForPriority": true
+  },
+  "lines": 5,
+  "noHelp": true
 }

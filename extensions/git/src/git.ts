@@ -525,7 +525,7 @@ export class Repository {
 		return this.repositoryRoot;
 	}
 
-	// TODO @Joao: rename to exec id:1 gh:2
+	// TODO  rename to exec id:1 gh:2 @Joao:
 	async run(args: string[], options: SpawnOptions = {}): Promise<IExecutionResult> {
 		return await this.git.exec(this.repositoryRoot, args, options);
 	}
@@ -573,21 +573,21 @@ export class Repository {
 
 		return stdout;
 
-		// TODO @joao id:2 gh:3
-		// return new Promise((c, e) => {
-		// detectMimesFromStream(child.stdout, null, (err, result) => {
-		// 	if (err) {
-		// 		e(err);
-		// 	} else if (isBinaryMime(result.mimes)) {
-		// 		e(<IFileOperationResult>{
-		// 			message: localize('fileBinaryError', "File seems to be binary and cannot be opened as text"),
-		// 			fileOperationResult: FileOperationResult.FILE_IS_BINARY
-		// 		});
-		// 	} else {
-		// c(this.doBuffer(object));
-		// 	}
-		// });
-		// });
+		// TODO  id:2 gh:3 @joao
+  // return new Promise((c, e) => {
+  // detectMimesFromStream(child.stdout, null, (err, result) => {
+  // 	if (err) {
+  // 		e(err);
+  // 	} else if (isBinaryMime(result.mimes)) {
+  // 		e(<IFileOperationResult>{
+  // 			message: localize('fileBinaryError', "File seems to be binary and cannot be opened as text"),
+  // 			fileOperationResult: FileOperationResult.FILE_IS_BINARY
+  // 		});
+  // 	} else {
+  // c(this.doBuffer(object));
+  // 	}
+  // });
+  // });
 	}
 
 	async add(paths: string[]): Promise<void> {
